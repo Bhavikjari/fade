@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fading test</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#fadein").click(function () {
+                $("#div1").fadeIn();
+                $("#div2").fadeIn(1000);
+            });
+        });
+        $(document).ready(function () {
+            $("#fadeout").click(function () {
+                $("#div1").fadeOut();
+                $("#div2").fadeOut(1000);
+            });
+        });
+        $(document).ready(function () {
+            $("#fadetoggle").click(function () {
+                $("#div1").fadeToggle();
+                $("#div2").fadeToggle(1000);
+            });
+        });
+        // $(document).ready(function () {
+        //     $("#fadeto").click(function () {
+        //         $("#div1").fadeTo("slow");
+        //         $("#div2").fadeTo(1000,0.50);
+        //     });
+        // });
+
+
+    </script>
+    <style type="text/css">
+        #div1 {
+            width: 100px;
+            height: 100px;
+            background-color: rgb(247, 247, 247);
+            display: none;
+        }
+
+        #div2 {
+            width: 50px;
+            height: 50px;
+            background-color: black;
+            display: none;
+        }
+        body{
+            color: rgb(192, 184, 184);
+            background-color: rgb(151, 28, 28);
+        }
+    </style>
+
+</head>
+
+<body>
+    <h1>
+       This is fading with css and html using jquery
+       
+    </h1>
+    <button id="fadein">fade in </button>
+    <button id="fadeout" >fade out</button>
+    <button id="fadetoggle">fade toggle</button>
+    <!-- <button id="fadeto">fade too</button> -->
+     <br><br><br>
+    <div id="div1"></div>
+    <br>
+    <br>
+    <div id="div2"></div>
+
+</body>
+
+</html>
